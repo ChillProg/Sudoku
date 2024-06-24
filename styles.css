@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #dde8fe;
+    margin: 0;
+}
+
+#sudoku-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 7px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: 10px solid  white;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 2px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.cell input {
+    width: 100%;
+    height: calc(100% - 1px);
+    text-align: center;
+    border: none;
+    border-top: 1px solid white;
+    outline: none;
+    font-size: 18px;
+    background-color: #e8efff;
+}
+
+.cell input::-webkit-outer-spin-button,
+.cell input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+.fixed {
+    background-color: #abc5fe;
+}
+
+div, input{
+    font-size: 17px !important;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#timer {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+  
+button {
+    font-family: 'Poppins', sans-serif;
+    border: none !important;
+    color: #333;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(1px);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
